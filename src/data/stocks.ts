@@ -7,7 +7,7 @@ export type Stock = {
   pct: number;
 };
 
-export function makeStocks(count: number, p0: number) {
+export function makeStocks(count: number, _p0: number) {
   const stocks: Stock[] = [];
   
   for (let i = 0; i < count; i++) {
