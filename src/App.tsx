@@ -18,10 +18,13 @@ function App() {
     <div className="min-h-screen bg-[var(--surface-muted)] text-[var(--text)] flex flex-col">
       <Header
         onHamburger={() => setDrawer(true)}
+      />
+      <Drawer 
+        open={drawer} 
+        onClose={() => setDrawer(false)}
         route={route}
         setRoute={setRoute}
       />
-      <Drawer open={drawer} onClose={() => setDrawer(false)} />
 
       <main className="pt-16 px-3 sm:px-4 pb-8">
         {route === "list" ? (

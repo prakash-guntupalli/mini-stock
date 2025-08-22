@@ -1,13 +1,8 @@
-import type { Route } from "../App";
 
 export default function Header({
   onHamburger,
-  route,
-  setRoute,
 }: {
   onHamburger: () => void;
-  route: Route;
-  setRoute: (r: Route) => void;
 }) {
   return (
     <header
@@ -29,28 +24,6 @@ export default function Header({
           </svg>
         </button>
         <div className="font-semibold text-lg">Stock Dashboard</div>
-        <nav className="ml-auto flex gap-2">
-          <button
-            onClick={() => setRoute("list")}
-            className={
-              route === "list"
-                ? "bg-[var(--brand)] text-white px-4 py-2 rounded-lg font-medium transition-colors"
-                : "px-4 py-2 rounded-lg font-medium hover:bg-[var(--surface-muted)] transition-colors"
-            }
-          >
-            Stocks
-          </button>
-          <button
-            onClick={() => setRoute("favorites")}
-            className={
-              route === "favorites"
-                ? "bg-[var(--brand)] text-white px-4 py-2 rounded-lg font-medium transition-colors"
-                : "px-4 py-2 rounded-lg font-medium hover:bg-[var(--surface-muted)] transition-colors"
-            }
-          >
-            Favorites
-          </button>
-        </nav>
       </div>
     </header>
   );
